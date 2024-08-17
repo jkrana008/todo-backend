@@ -65,3 +65,86 @@ TypeError: Cannot create property 'Symbol(level)' on string 'Request received fo
 2024-08-17T14:24:32.333Z [32minfo[39m: Signup request received for user:  | {"name":"Jai","email":"jkrana0015@gmail.com"}
 2024-08-17T14:24:32.333Z [32minfo[39m: Checking if user already exists
 2024-08-17T14:24:34.222Z [32minfo[39m: User already exists
+2024-08-17T17:49:52.949Z [32minfo[39m: Request received for login
+2024-08-17T17:50:10.060Z [32minfo[39m: Request received for login
+2024-08-17T17:53:26.343Z [32minfo[39m: Request received for login
+2024-08-17T17:53:38.813Z [32minfo[39m: Request received for signup
+2024-08-17T17:53:38.814Z [32minfo[39m: Signup request received for user:  | {"name":"Jai","email":"jkrana0015@gmail.com"}
+2024-08-17T17:53:38.815Z [32minfo[39m: Checking if user already exists
+2024-08-17T17:53:40.686Z [32minfo[39m: User already exists
+2024-08-17T17:53:48.298Z [32minfo[39m: Request received for signup
+2024-08-17T17:53:48.298Z [32minfo[39m: Signup request received for user:  | {"name":"Jai","email":"jkrana0016@gmail.com"}
+2024-08-17T17:53:48.299Z [32minfo[39m: Checking if user already exists
+2024-08-17T17:53:48.592Z [32minfo[39m: User already not exist,  Generating hashed password
+2024-08-17T17:53:48.723Z [32minfo[39m: Creating user instance
+2024-08-17T17:53:48.728Z [32minfo[39m: Saving user to database
+2024-08-17T17:53:49.032Z [32minfo[39m: User created successfully and retrieving user details
+2024-08-17T17:53:49.033Z [32minfo[39m: Removing password from user object
+2024-08-17T17:53:49.033Z [32minfo[39m: Sending success response
+2024-08-17T17:53:54.364Z [32minfo[39m: Request received for login
+2024-08-17T17:54:07.011Z [32minfo[39m: Request received for login
+2024-08-17T17:57:10.988Z [32minfo[39m: Request received for login
+2024-08-17T17:57:52.681Z [32minfo[39m: Request received for login
+2024-08-17T17:57:52.683Z [32minfo[39m: Login request received for user:  | {"email":"jkrana0015@gmail.com"}
+2024-08-17T17:57:52.684Z [32minfo[39m: Checking if user already exists
+2024-08-17T17:57:52.990Z [32minfo[39m: Checking if password is correct
+2024-08-17T17:58:02.459Z [32minfo[39m: Password is incorrect
+2024-08-17T17:58:09.421Z [32minfo[39m: Request received for login
+2024-08-17T17:58:09.422Z [32minfo[39m: Login request received for user:  | {"email":"jkrana0015@gmail.com"}
+2024-08-17T17:58:09.423Z [32minfo[39m: Checking if user already exists
+2024-08-17T17:58:09.725Z [32minfo[39m: Checking if password is correct
+2024-08-17T17:58:09.823Z [32minfo[39m: Password is correct, Generating JWT token
+2024-08-17T17:58:09.826Z [32minfo[39m: Sending success response
+2024-08-17T18:08:50.753Z [32minfo[39m: Request received for getProfile
+2024-08-17T18:08:50.760Z [32minfo[39m: Get profile request received for user: 
+2024-08-17T18:08:51.131Z [31merror[39m: unhandledRejection: Cannot read properties of null (reading 'toObject')
+TypeError: Cannot read properties of null (reading 'toObject')
+    at getProfile (/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js:13:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) | {"error":{},"stack":"TypeError: Cannot read properties of null (reading 'toObject')\n    at getProfile (/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js:13:31)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","rejection":true,"date":"Sat Aug 17 2024 23:38:51 GMT+0530 (India Standard Time)","process":{"pid":28917,"uid":501,"gid":20,"cwd":"/Users/apple/Documents/personal/shubham/backend/todo","execPath":"/Users/apple/.nvm/versions/node/v16.20.2/bin/node","version":"v16.20.2","argv":["/Users/apple/.nvm/versions/node/v16.20.2/bin/node","/Users/apple/Documents/personal/shubham/backend/todo/src/app.js"],"memoryUsage":{"rss":54378496,"heapTotal":30851072,"heapUsed":28551080,"external":19358396,"arrayBuffers":18337058}},"os":{"loadavg":[2.455078125,3.05126953125,3.14306640625],"uptime":47123},"trace":[{"column":31,"file":"/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js","function":"getProfile","line":13,"method":null,"native":false},{"column":5,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":96,"method":null,"native":false}]}
+2024-08-17T18:09:24.925Z [32minfo[39m: Request received for getProfile
+2024-08-17T18:09:24.927Z [32minfo[39m: Get profile request received for user: 
+2024-08-17T18:11:01.631Z [32minfo[39m: Request received for getProfile
+2024-08-17T18:11:01.634Z [32minfo[39m: Get profile request received for user: 
+2024-08-17T18:11:08.062Z [32minfo[39m: Removing password from user object
+2024-08-17T18:11:08.065Z [32minfo[39m: Sending success response
+2024-08-17T18:18:27.380Z [32minfo[39m: Request received for updateProfile
+2024-08-17T18:18:27.382Z [32minfo[39m: Update profile request received for user: 
+2024-08-17T18:18:27.995Z [32minfo[39m: Removing password from user object
+2024-08-17T18:18:27.997Z [32minfo[39m: Sending success response
+2024-08-17T18:18:33.121Z [32minfo[39m: Request received for updateProfile
+2024-08-17T18:18:33.123Z [32minfo[39m: Update profile request received for user: 
+2024-08-17T18:18:33.720Z [32minfo[39m: Removing password from user object
+2024-08-17T18:18:33.724Z [32minfo[39m: Sending success response
+2024-08-17T18:25:36.321Z [32minfo[39m: Request received for changePassword
+2024-08-17T18:25:36.323Z [32minfo[39m: Change password request received for user: 
+2024-08-17T18:25:36.672Z [31merror[39m: unhandledRejection: data and hash arguments required
+Error: data and hash arguments required
+    at Object.compare (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/bcrypt.js:208:17)
+    at /Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/promises.js:29:12
+    at new Promise (<anonymous>)
+    at Object.module.exports.promise (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/promises.js:20:12)
+    at Object.compare (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/bcrypt.js:204:25)
+    at changePassword (/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js:62:42)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) | {"error":{},"stack":"Error: data and hash arguments required\n    at Object.compare (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/bcrypt.js:208:17)\n    at /Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/promises.js:29:12\n    at new Promise (<anonymous>)\n    at Object.module.exports.promise (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/promises.js:20:12)\n    at Object.compare (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/bcrypt.js:204:25)\n    at changePassword (/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js:62:42)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","rejection":true,"date":"Sat Aug 17 2024 23:55:36 GMT+0530 (India Standard Time)","process":{"pid":43991,"uid":501,"gid":20,"cwd":"/Users/apple/Documents/personal/shubham/backend/todo","execPath":"/Users/apple/.nvm/versions/node/v16.20.2/bin/node","version":"v16.20.2","argv":["/Users/apple/.nvm/versions/node/v16.20.2/bin/node","/Users/apple/Documents/personal/shubham/backend/todo/src/app.js"],"memoryUsage":{"rss":64749568,"heapTotal":30588928,"heapUsed":28439544,"external":19407332,"arrayBuffers":18299140}},"os":{"loadavg":[3.01123046875,3.34765625,3.4228515625],"uptime":48128},"trace":[{"column":17,"file":"/Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/bcrypt.js","function":"Object.compare","line":208,"method":"compare","native":false},{"column":12,"file":"/Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/promises.js","function":null,"line":29,"method":null,"native":false},{"column":null,"file":null,"function":"new Promise","line":null,"method":null,"native":false},{"column":12,"file":"/Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/promises.js","function":"Object.module.exports.promise","line":20,"method":"promise","native":false},{"column":25,"file":"/Users/apple/Documents/personal/shubham/backend/todo/node_modules/bcrypt/bcrypt.js","function":"Object.compare","line":204,"method":"compare","native":false},{"column":42,"file":"/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js","function":"changePassword","line":62,"method":null,"native":false},{"column":5,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":96,"method":null,"native":false}]}
+2024-08-17T18:26:06.259Z [32minfo[39m: Request received for changePassword
+2024-08-17T18:26:15.001Z [32minfo[39m: Change password request received for user: 
+2024-08-17T18:26:43.646Z [32minfo[39m: Request received for changePassword
+2024-08-17T18:26:47.224Z [32minfo[39m: Change password request received for user: 
+2024-08-17T18:26:48.075Z [32minfo[39m: Sending success response
+2024-08-17T18:26:54.473Z [32minfo[39m: Request received for changePassword
+2024-08-17T18:26:56.874Z [32minfo[39m: Change password request received for user: 
+2024-08-17T18:26:57.274Z [31merror[39m: unhandledRejection: email is not defined
+ReferenceError: email is not defined
+    at changePassword (/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js:67:42) | {"error":{},"stack":"ReferenceError: email is not defined\n    at changePassword (/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js:67:42)","rejection":true,"date":"Sat Aug 17 2024 23:56:57 GMT+0530 (India Standard Time)","process":{"pid":45065,"uid":501,"gid":20,"cwd":"/Users/apple/Documents/personal/shubham/backend/todo","execPath":"/Users/apple/.nvm/versions/node/v16.20.2/bin/node","version":"v16.20.2","argv":["/Users/apple/.nvm/versions/node/v16.20.2/bin/node","/Users/apple/Documents/personal/shubham/backend/todo/src/app.js"],"memoryUsage":{"rss":53297152,"heapTotal":31637504,"heapUsed":28592736,"external":19329018,"arrayBuffers":18303965}},"os":{"loadavg":[4.2705078125,3.58154296875,3.49658203125],"uptime":48209},"trace":[{"column":42,"file":"/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js","function":"changePassword","line":67,"method":null,"native":false}]}
+2024-08-17T18:27:20.788Z [32minfo[39m: Request received for changePassword
+2024-08-17T18:27:24.057Z [32minfo[39m: Change password request received for user: 
+2024-08-17T18:27:24.504Z [32minfo[39m: Password is incorrect
+2024-08-17T18:27:31.794Z [32minfo[39m: Request received for changePassword
+2024-08-17T18:27:31.797Z [32minfo[39m: Change password request received for user: 
+2024-08-17T18:27:32.596Z [32minfo[39m: Sending success response
+2024-08-17T18:31:29.631Z [32minfo[39m: Request received for changePassword
+2024-08-17T18:31:29.634Z [32minfo[39m: Change password request received for user: 
+2024-08-17T18:31:30.113Z [32minfo[39m: Password is incorrect
+2024-08-17T18:31:33.919Z [32minfo[39m: Request received for changePassword
+2024-08-17T18:31:33.920Z [32minfo[39m: Change password request received for user: 
+2024-08-17T18:31:34.712Z [32minfo[39m: Sending success response

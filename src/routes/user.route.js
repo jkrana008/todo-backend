@@ -1,10 +1,13 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const { signupValidations } = require("../validations/user.validations");
-const validationChecker = require("../middleware/validationChecker");
+const auth = require('../middleware/authMiddleware');
 
-const { signUp } = require("../controller/user.controller");
+const { getProfile, updateProfile, changePassword } = require('../controller/user.controller');
+const { changePasswordValidations } = require('../validations/user.validations');
+const validationChecker = require('../middleware/validationChecker');
 
-router.post("/signup", signupValidations, validationChecker, signUp);
+router.get('/profile', auth, getProfile);
+router.put('/', auth, updateProfile);
+router.patch('/change-password', auth, changePasswordValidations, validationChecker, changePassword);
 
 module.exports = router;

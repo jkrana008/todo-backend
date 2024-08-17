@@ -1,47 +1,85 @@
-const bcrypt = require("bcrypt");
 const User = require("../models/user.model");
+const bcrypt = require("bcrypt");
+
 const {
   successResponse,
   errorResponse,
 } = require("../utils/responseFormatter");
 const logger = require("../utils/logger");
 
-const signUp = async (req, res) => {
-  logger.info("Request received for signup");
-  const { name, email, password } = req.body;
-  logger.info("Signup request received for user: ", { name, email });
-
-  logger.info("Checking if user already exists", email);
-  const existingUser = await User.findOne({ email });
-  if (existingUser) {
-    logger.info("User already exists", email);
-    return res.status(400).json(errorResponse("User already exists"));
+const getProfile = async (req, res) => {
+  logger.info("Request received for getProfile");
+  const { user } = req;
+  logger.info("Get profile request received for user: ", user.email);
+  const userDetails = await User.findById(user.id);
+  if (!userDetails) {
+    logger.info("User not found", user.email);
+    return res.status(404).json(errorResponse("User not found"));
   }
-
-  logger.info("User already not exist,  Generating hashed password");
-  const hashedPassword = await bcrypt.hash(password, 10);
-
-  logger.info("Creating user instance");
-  const user = new User({
-    name,
-    email,
-    password: hashedPassword,
-  });
-
-  logger.info("Saving user to database");
-  await user.save();
-
-  logger.info("User created successfully and retrieving user details");
-  const userObj = user.toObject();
+  const userObj = userDetails.toObject();
   logger.info("Removing password from user object");
-  delete userObj.password;
+  delete userObj.password; // We will handle this in User schema later
 
   logger.info("Sending success response");
   return res
-    .status(201)
-    .json(successResponse(userObj, "User created successfully"));
+    .status(200)
+    .json(successResponse(userObj, "User details retrieved successfully"));
+};
+
+const updateProfile = async (req, res) => {
+  logger.info("Request received for updateProfile");
+  const { user } = req;
+  const { name } = req.body;
+  logger.info("Update profile request received for user: ", user.email);
+  const userDetails = await User.findById(user.id);
+  if (!userDetails) {
+    logger.info("User not found", user.email);
+    return res.status(404).json(errorResponse("User not found"));
+  }
+  userDetails.name = name;
+  await userDetails.save();
+  const userObj = userDetails.toObject();
+  logger.info("Removing password from user object");
+  delete userObj.password; // We will handle this in User schema later
+
+  logger.info("Sending success response");
+  return res
+    .status(200)
+    .json(successResponse(userObj, "User details updated successfully"));
+};
+
+const changePassword = async (req, res) => {
+  logger.info("Request received for changePassword");
+  const { user } = req;
+  const { oldPassword, newPassword } = req.body;
+  logger.info("Change password request received for user: ", user.email);
+  const userDetails = await User.findById(user.id);
+  if (!userDetails) {
+    logger.info("User not found", user.email);
+    return res.status(404).json(errorResponse("User not found"));
+  }
+
+  const isPasswordCorrect = await bcrypt.compare(
+    oldPassword,
+    userDetails.password
+  );
+  if (!isPasswordCorrect) {
+    logger.info("Password is incorrect", user.email);
+    return res.status(400).json(errorResponse("Invalid Old Password!"));
+  }
+
+  const hashedPassword = await bcrypt.hash(newPassword, 10);
+  userDetails.password = hashedPassword;
+  await userDetails.save();
+
+  logger.info("Sending success response");
+  return res
+    .status(200)
+    .json(successResponse({}, "Password changed successfully"));
 };
 
 module.exports = {
-  signUp,
+  getProfile,
+  updateProfile,
+  changePassword,
 };
