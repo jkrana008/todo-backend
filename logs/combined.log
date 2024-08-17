@@ -1,0 +1,67 @@
+2024-08-17T14:11:47.355Z [31merror[39m: unhandledRejection: Cannot create property 'Symbol(level)' on string 'Request received for signup'
+TypeError: Cannot create property 'Symbol(level)' on string 'Request received for signup'
+    at DerivedLogger.log (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/winston/lib/winston/logger.js:214:20)
+    at signUp (/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js:7:10)
+    at Layer.handle [as handle_request] (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/route.js:149:13)
+    at validationChecker (/Users/apple/Documents/personal/shubham/backend/todo/src/middleware/validationChecker.js:8:3)
+    at Layer.handle [as handle_request] (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/route.js:149:13)
+    at middleware (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express-validator/lib/middlewares/check.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2024-08-17T14:12:57.915Z [31merror[39m: unhandledRejection: Cannot create property 'Symbol(level)' on string 'Request received for signup'
+TypeError: Cannot create property 'Symbol(level)' on string 'Request received for signup'
+    at DerivedLogger.log (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/winston/lib/winston/logger.js:214:20)
+    at signUp (/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js:7:10)
+    at Layer.handle [as handle_request] (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/route.js:149:13)
+    at validationChecker (/Users/apple/Documents/personal/shubham/backend/todo/src/middleware/validationChecker.js:8:3)
+    at Layer.handle [as handle_request] (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/route.js:149:13)
+    at middleware (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express-validator/lib/middlewares/check.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2024-08-17T14:13:56.114Z [31merror[39m: unhandledRejection: Cannot create property 'Symbol(level)' on string 'Request received for signup'
+TypeError: Cannot create property 'Symbol(level)' on string 'Request received for signup'
+    at DerivedLogger.log (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/winston/lib/winston/logger.js:214:20)
+    at signUp (/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js:7:10)
+    at Layer.handle [as handle_request] (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/route.js:149:13)
+    at validationChecker (/Users/apple/Documents/personal/shubham/backend/todo/src/middleware/validationChecker.js:8:3)
+    at Layer.handle [as handle_request] (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/route.js:149:13)
+    at middleware (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express-validator/lib/middlewares/check.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2024-08-17T14:14:23.064Z [32minfo[39m: Request received for signup
+2024-08-17T14:14:41.876Z [31merror[39m: unhandledRejection: Cannot create property 'Symbol(level)' on string 'Request received for signup'
+TypeError: Cannot create property 'Symbol(level)' on string 'Request received for signup'
+    at DerivedLogger.log (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/winston/lib/winston/logger.js:214:20)
+    at signUp (/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js:7:10)
+    at Layer.handle [as handle_request] (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/route.js:149:13)
+    at validationChecker (/Users/apple/Documents/personal/shubham/backend/todo/src/middleware/validationChecker.js:8:3)
+    at Layer.handle [as handle_request] (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/route.js:149:13)
+    at middleware (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express-validator/lib/middlewares/check.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2024-08-17T14:15:33.641Z [31merror[39m: TypeError: Cannot create property 'Symbol(level)' on string 'Request received for signup'
+    at DerivedLogger.log (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/winston/lib/winston/logger.js:214:20)
+    at signUp (/Users/apple/Documents/personal/shubham/backend/todo/src/controller/user.controller.js:7:10)
+    at Layer.handle [as handle_request] (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/route.js:149:13)
+    at validationChecker (/Users/apple/Documents/personal/shubham/backend/todo/src/middleware/validationChecker.js:8:3)
+    at Layer.handle [as handle_request] (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express/lib/router/route.js:149:13)
+    at middleware (/Users/apple/Documents/personal/shubham/backend/todo/node_modules/express-validator/lib/middlewares/check.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2024-08-17T14:22:20.889Z [32minfo[39m: Request received for signup
+2024-08-17T14:22:20.891Z [32minfo[39m: Signup request received for user: 
+2024-08-17T14:22:20.891Z [32minfo[39m: Checking if user already exists
+2024-08-17T14:22:21.196Z [32minfo[39m: User already exists
+2024-08-17T14:23:09.295Z [32minfo[39m: Request received for signup
+2024-08-17T14:23:09.297Z [32minfo[39m: Signup request received for user: 
+2024-08-17T14:23:09.297Z [32minfo[39m: Checking if user already exists
+2024-08-17T14:23:09.640Z [32minfo[39m: User already exists
+2024-08-17T14:24:32.331Z [32minfo[39m: Request received for signup
+2024-08-17T14:24:32.333Z [32minfo[39m: Signup request received for user:  | {"name":"Jai","email":"jkrana0015@gmail.com"}
+2024-08-17T14:24:32.333Z [32minfo[39m: Checking if user already exists
+2024-08-17T14:24:34.222Z [32minfo[39m: User already exists
