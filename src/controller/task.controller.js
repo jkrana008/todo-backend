@@ -5,11 +5,12 @@ const logger = require('../utils/logger');
 const createTask = async (req, res) => {
   logger.info('Request received for createTask');
   const { user } = req;
-  const { name } = req.body;
+  const { name, categoryId } = req.body;
   logger.info('Create task request received for user: ', user.email);
   const task = new Task({
     name,
     userId: user.id,
+    categoryId,
   });
   await task.save();
   logger.info('Sending success response');
@@ -20,7 +21,7 @@ const getTasks = async (req, res) => {
   logger.info('Request received for getTasks');
   const { user } = req;
   logger.info('Get tasks request received for user: ', user.email);
-  const tasks = await Task.find({ userId: user.id });
+  const tasks = await Task.find({ userId: user.id }).populate('categoryId', '_id, name');
   logger.info('Sending success response');
   return res.status(200).json(successResponse(tasks, 'Tasks retrieved successfully'));
 };
@@ -30,7 +31,7 @@ const getTask = async (req, res) => {
   const { user } = req;
   const { id } = req.params;
   logger.info('Get task request received for user: ', user.email);
-  const task = await Task.findOne({ _id: id, userId: user.id });
+  const task = await Task.findOne({ _id: id, userId: user.id }).populate('categoryId', '_id, name');
   if (!task) {
     logger.error('Task not found');
     return res.status(404).json(errorResponse(null, 'Task not found'));
@@ -43,7 +44,7 @@ const updateTask = async (req, res) => {
   logger.info('Request received for updateTask');
   const { user } = req;
   const { id } = req.params;
-  const { name } = req.body;
+  const { name, categoryId } = req.body;
   logger.info('Update task request received for user: ', user.email);
   const task = await Task.findOne({ _id: id, userId: user.id });
   if (!task) {
@@ -51,6 +52,7 @@ const updateTask = async (req, res) => {
     return res.status(404).json(errorResponse(null, 'Task not found'));
   }
   task.name = name;
+  task.categoryId = categoryId;
   await task.save();
   logger.info('Sending success response');
   return res.status(200).json(successResponse(task, 'Task updated successfully'));

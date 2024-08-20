@@ -11,6 +11,11 @@ const taskSchema = new Schema({
     ref: 'User',
     required: true,
   },
+  categoryId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Category',
+    required: true,
+  },
   completed: {
     type: Boolean,
     default: false,
